@@ -1,14 +1,8 @@
-import { 
-  StyleSheet, 
-  View, 
-  Text, 
-  Image, 
-  Dimensions
-} from "react-native";
+import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
 
-/* Files called index.js are treated specially by Node.js. 
+/* Files called index.js are treated specially by Node.js.
  * You can import them by giving the name of the folder the index.js
- * is located in! */ 
+ * is located in! */
 import Icons from "../../assets/Icons";
 
 /* This handy trick grabs the width and height of the device's window,
@@ -22,9 +16,9 @@ const Header = () => {
     <View style={styles.header}>
       <Text style={styles.name}>{Profiles.landay.name}</Text>
       <Text>{Profiles.landay.pronouns}</Text>
-      <Image 
-        source={Icons.sun /* For dark mode, use Icons.moon */} 
-        style={styles.headerIcon} 
+      <Image
+        source={Icons.sun /* For dark mode, use Icons.moon */}
+        style={styles.headerIcon}
       />
     </View>
   );
@@ -32,15 +26,15 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   headerIcon: {
-    height: windowWidth * 0.1,
-    width: windowWidth * 0.1,
+    height: windowWidth * 0.5,
+    width: windowWidth * 0.5,
   },
   header: {
     // fill this in!
   },
   name: {
     // We've loaded this font for you in App.js
-    fontFamily: 'Sydney-Bold', // 'Sydney' is the non-bold version
+    fontFamily: "Sydney-Bold", // 'Sydney' is the non-bold version
   },
   // add more styles for other components!
 });

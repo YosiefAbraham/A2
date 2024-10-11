@@ -1,17 +1,11 @@
-import { 
-  View, 
-  StyleSheet, 
-  Image 
-} from "react-native";
+import { View, StyleSheet, Image, Button } from "react-native";
 import Profiles from "../../assets/Profiles";
 
 const Body = () => {
   return (
     <View style={styles.container}>
-      <Image
-        source={Profiles.landay.image}
-        style={styles.image}
-      />
+      <Image source={Profiles.landay.image} style={styles.image} />
+      <Button title={"Find Love Now"} style={styles.button} />
     </View>
   );
 };

@@ -1,7 +1,7 @@
 /**
  * You don't need to edit this file, but you can if you want!
  * Almost of the work for this assignment is in Header.js, Body.js, and Footer.js.
- * 
+ *
  * If you're doing the light/dark mode toggle extension, you will need to make
  * a couple tweaks here.
  */
