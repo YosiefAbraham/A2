@@ -1,4 +1,12 @@
-import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  Dimensions,
+  Button,
+  Pressable,
+} from "react-native";
 
 /* Files called index.js are treated specially by Node.js.
  * You can import them by giving the name of the folder the index.js
@@ -14,8 +22,10 @@ const windowHeight = Dimensions.get("window").height;
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.name}>{Profiles.landay.name}</Text>
-      <Text>{Profiles.landay.pronouns}</Text>
+      <View style={styles.np}>
+        <Text style={styles.name}>{Profiles.landay.name}</Text>
+        <Text style={styles.pronouns}>{Profiles.landay.pronouns}</Text>
+      </View>
       <Image
         source={Icons.sun /* For dark mode, use Icons.moon */}
         style={styles.headerIcon}
@@ -24,19 +34,46 @@ const Header = () => {
   );
 };
 
+//alert("Nuh Uh Bud")
+
 const styles = StyleSheet.create({
   headerIcon: {
-    height: windowWidth * 0.5,
-    width: windowWidth * 0.5,
+    height: windowWidth * 0.1,
+    width: windowWidth * 0.1,
   },
   header: {
-    // fill this in!
+    width: "102%",
+    height: "10%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 14,
+    backgroundColor: "#F3F3F3",
   },
+
+  np: {
+    flexDirection: "column",
+  },
+
   name: {
     // We've loaded this font for you in App.js
     fontFamily: "Sydney-Bold", // 'Sydney' is the non-bold version
+    fontSize: 32,
+    justifyContent: "flex-start",
+    alignContent: "flex-start",
+    flex: "100%",
   },
   // add more styles for other components!
+  pronouns: {
+    //flexDirection: "column", // Change the orientation to column for this item
+    //justifyContent: "flex-start",
+    justifyContent: "flex-start",
+    alignContent: "flex-start",
+    font: 32,
+  },
+  icon: {
+    fontSize: 24,
+  },
 });
 
 export default Header;
