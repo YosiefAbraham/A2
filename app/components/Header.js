@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     width: windowWidth * 0.1,
   },
   header: {
-    width: "102%",
+    width: "100%",
     height: "10%",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   name: {
     // We've loaded this font for you in App.js
     fontFamily: "Sydney-Bold", // 'Sydney' is the non-bold version
-    fontSize: 32,
+    fontSize: 28,
     justifyContent: "flex-start",
     alignContent: "flex-start",
     flex: "100%",
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     //justifyContent: "flex-start",
     justifyContent: "flex-start",
     alignContent: "flex-start",
-    font: 32,
+    font: 18,
   },
   icon: {
     fontSize: 24,

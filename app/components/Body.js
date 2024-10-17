@@ -16,11 +16,8 @@ const Body = () => {
         <View style={styles.rounded}>
           <Text style={styles.words}>{"Me hottest take"}</Text>
           <View style={styles.adjustLook}>
-            <Image source={Icons.player_dark} style={styles.playerIcon} />
-            <Image
-              source={Icons.audio_waveform_dark}
-              style={styles.audioIcon}
-            />
+            <Image source={Icons.player.light} style={styles.playerIcon} />
+            <Image source={Icons.audioWave.dark} style={styles.audioIcon} />
           </View>
         </View>
       </View>
@@ -93,15 +90,14 @@ const styles = StyleSheet.create({
   },
 
   playerIcon: {
-    width: "20%",
-    height: "10%",
+    width: 50,
+    height: 50,
     marginRight: 10,
   },
 
   audioIcon: {
-    fontSize: 24,
-    justifyContent: "flex-end",
-    alignContent: "flex-end",
+    width: 50,
+    height: 50,
   },
 });
 
