@@ -6,7 +6,7 @@
  * a couple tweaks here.
  */
 
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
 
 import { useFonts } from "expo-font";
@@ -26,6 +26,8 @@ export default function App() {
     "Sydney-Bold": require("./assets/Fonts/Sydney-Serial-Bold.ttf"),
   });
 
+  const [isThemeDark, setThemeDark] = useState(false);
+
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
@@ -38,20 +40,24 @@ export default function App() {
   /* ^Don't mind/edit this one either unless you decide to do the dark theme one, in that case, you will have to change it accordingly */
 
   return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
-      <Header />
-      <Body />
-      <Footer />
+    <View
+      style={[
+        styles.container,
+        { backgroundColor: isThemeDark ? Themes.dark.bg : Themes.light.bg },
+      ]}
+      onLayout={onLayoutRootView}
+    >
+      {/* Pass isThemeDark and setThemeDark to Header, Body, and Footer */}
+      <Header isThemeDark={isThemeDark} setThemeDark={setThemeDark} />
+      <Body isThemeDark={isThemeDark} />
+      <Footer isThemeDark={isThemeDark} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  // Feel free to change this if you want!
   container: {
     flex: 1,
-    backgroundColor: Themes.light.bg,
-    backgroundColor: "#F3F3F3",
     alignItems: "center",
     paddingHorizontal: 16,
   },
